@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
            "providers": ["ActivismeBe\\Toastr\\ToastrServiceProvider"],
-           "aliases": {"ActivismeBe\\Toastr\\ToastrFacade"},
+           "aliases": {"ActivismeBe\\Toastr\\ToastrFacade"}
         }
     }
 }
