@@ -25,6 +25,14 @@ Include jQuery and [toastr.js](https://github.com/CodeSeven/toastr) in your mast
 {!! Toastr::render() !!}
 ```
 
+If you defer the loading of your scripts include `Toastr::render(true)`
+
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" defer></script>
+{!! Toastr::render(true) !!}
+```
+
 Call one of these methods in your controllers to insert a toast:
   - `Toastr::warning($message, $title = null, $options = [])` - add a warning toast
   - `Toastr::error($message, $title = null, $options = [])` - add an error toast

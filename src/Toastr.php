@@ -54,13 +54,21 @@ class Toastr
     /**
      * Render the notifications script tag 
      * 
+     * @param  bool $defer Indicates that the resources are loading with deferred option or not.
      * @return string
      */
-    public function render(): string 
+    public function render(bool $defer = false): string 
     {
         $notifications = $this->session->get('toastr::notifications'); 
         $output        = '<script type="text/javascript">';
         $lastconfig    = [];
+
+        if ($defer) {
+            $output = 'window.addEventListener("DOMContentLoaded", function() {
+            (function($) {
+                $(document).ready(function() {
+                    $(function(){';
+        }
         
         if (! $notifications) { // Notifications are empty so register a empty array under the variable.
             $notifications = [];
@@ -86,6 +94,13 @@ class Toastr
             $output .= 'toastr.' . $notification['type'] . 
                 "('" .  str_replace("'", "\\'", $notification['message']). "'" . 
                 (isset($notification['title']) ? ", '" . str_replace("'", "\\'", htmlentities($notification['title'])) . "'" : null) . ');';
+        }
+
+        if ($defer) {
+                $output = '});
+                    });
+                })(jQuery);
+            });';
         }
 
         $output .= '</script>';
