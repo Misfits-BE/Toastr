@@ -3,7 +3,7 @@
 namespace ActivismeBe\Toastr;
 
 use Illuminate\Support\ServiceProvider; 
-use ActivismeBE\Toastr\Toastr;
+use ActivismeBe\Toastr\Toastr;
 
 /**
  * Class ToastrServiceProvider 

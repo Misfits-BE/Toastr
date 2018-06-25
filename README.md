@@ -15,7 +15,7 @@ and run `composer install`
 Include jQuery and [toastr.js](https://github.com/CodeSeven/toastr) in your master view template, and the output of 
 `Toastr::render()` afterwards: 
 
-````html
+```html
 <!-- Stylesheets -->
 <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
