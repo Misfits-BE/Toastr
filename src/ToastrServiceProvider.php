@@ -46,7 +46,7 @@ class ToastrServiceProvider extends ServiceProvider
          * @param  mixed $app The application services variable.
          * @return Toastr
          */
-        $this->app->signleton('toastr', function ($app): Toastr {
+        $this->app->singleton('toastr', function ($app): Toastr {
             return new Toastr($app['session'], $app['config']);
         });
     }
