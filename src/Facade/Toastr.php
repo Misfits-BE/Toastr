@@ -1,6 +1,6 @@
 <?php 
 
-namespace ActivismeBe\Toastr; 
+namespace ActivismeBe\Toastr\Facade; 
 
 use Illuminate\Support\Facades\Facade; 
 
@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Facade;
  *
  * @author      Kamal Nasser <kamal@kamalnasser.net>
  * @copyright   2013 Kamal Nasser <kamal@kamalnasser.net>
- * @package     ActivismeBe\Toastr
+ * @package     ActivismeBe\Toastr\Facade
  */
-class ToastrFacade extends Facade 
+class Toastr extends Facade 
 {
     /**
      * Get the register name of the component. 
@@ -22,6 +22,6 @@ class ToastrFacade extends Facade
      */
     protected static function getFacadeAccessor(): string 
     {
-        return "Toastr";
+        return "toastr";
     }
 }
