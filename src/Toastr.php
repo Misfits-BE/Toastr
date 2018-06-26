@@ -135,7 +135,7 @@ class Toastr
      * @param  array  $options  User defined Toastr notification options
      * @return bool|void        Return whether the notifications are successfully created or not.
      */
-    public function error(string $message, ?string $title = null, array $options): void 
+    public function error(string $message, ?string $title = null, array $options = []): void 
     {
         $this->add('error', $message, $title, $options);
     }
@@ -148,7 +148,7 @@ class Toastr
      * @param  string $options   User defined Toastr notification options 
      * @return bool|void         Return whether the notification are successfully created or not.
      */
-    public function success(string $message, ?string $title = null, array $options): void 
+    public function success(string $message, ?string $title = null, array $options = []): void 
     {
         $this->add('success', $message, $title, $options);
     }
@@ -161,7 +161,7 @@ class Toastr
      * @param  string $options  User defined Toastr notification options 
      * @return bool|void        Return whether the notification are successfully created or not. 
      */
-    public function warning(string $message, ?string $title = null, array $options): void 
+    public function warning(string $message, ?string $title = null, array $options = []): void 
     {
         $this->add('warning', $message, $title, $options); 
     }
